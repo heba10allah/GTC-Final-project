@@ -50,3 +50,4 @@ if image is not None:
         st.success(f"✅ Person recognized: {predicted_person[0]}")
     else:
         st.warning("❌ No face detected in the image")
+
