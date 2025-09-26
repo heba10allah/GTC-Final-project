@@ -12,8 +12,6 @@ classifier = joblib.load("classifier.pkl")
 mtcnn = MTCNN()
 facenet = InceptionResnetV1(pretrained='vggface2').eval()
 
-# --- Load Classifier (مثلاً SVM) ---
-
 # --- دالة استخراج embedding ---
 def get_embedding(img):
     face = mtcnn(img)
@@ -50,4 +48,5 @@ if image is not None:
         st.success(f"✅ Person recognized: {predicted_person[0]}")
     else:
         st.warning("❌ No face detected in the image")
+
 
